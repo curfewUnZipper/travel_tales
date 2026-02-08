@@ -22,7 +22,7 @@ export default function LandingPage() {
         
         {/* Logo Left */}
         <div className="flex items-center">
-          <Link href="/" className="absolute top-0 left-1">
+          <Link href="/" className="absolute top-[-20] left-1">
             <Image
               src="/logo2.png"
               alt="Wayfarer's Echoes Logo"

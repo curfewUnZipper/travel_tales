@@ -1,4 +1,10 @@
 "use client";
+import { Great_Vibes } from "next/font/google";
+
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -57,13 +63,26 @@ export default function RegisterPage() {
 
       {/* ===== HEADER / LOGO SPACE ===== */}
       <header className="w-full py-6 flex justify-center relative z-10">
-        <div className="text-2xl md:text-3xl font-bold tracking-wide">
+        <div className={`${greatVibes.className} text-black text-5xl md:text-6xl relative top-2 tracking-wide`}>
           Wayfarer’s Echoes
         </div>
       </header>
 
+      {/* Logo Left */}
+        <div className="flex  items-center">
+          <Link href="/" className="absolute top-[-20] ">
+            <Image
+              src="/logo2.png"
+              alt="Wayfarer's Echoes Logo"
+              width={230}
+              height={110}
+              priority
+            />
+          </Link>
+        </div>
+
      {/* ===== COLLAGE STRIP ===== */}
-    <section className="relative w-full h-[45vh] flex items-center justify-center z-10">
+    <section className="relative w-full left-[-5] h-[45vh] flex items-center justify-center z-10">
 
       <div className="absolute flex gap-6 w-full px-6 overflow-hidden">
         {images.map((src, i) => (
@@ -89,10 +108,13 @@ export default function RegisterPage() {
 
       {/* ===== FORM FLOAT ===== */}
       <section className="flex justify-center -mt-24 pb-20 px-4 relative z-10">
-        <div className="w-full max-w-md p-8 bg-white/20 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/30">
+        <div className="w-full max-w-md p-8 bg-white/5 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/30">
 
+          <h2 className="text-xl font-bold mb-6 text-center">
+            Hey Fam Welcome To The Community 🫶
+          </h2>
           <h2 className="text-2xl font-bold mb-6 text-center">
-            Create Account 🌍
+            Create Account
           </h2>
 
           <input
